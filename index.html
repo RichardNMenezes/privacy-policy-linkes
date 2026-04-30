@@ -29,6 +29,29 @@
       background: var(--bg);
       color: var(--fg);
     }
+    .lang-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(94, 53, 177, 0.2);
+      font-size: 0.875rem;
+    }
+    .lang-nav a {
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+    .lang-nav a:hover { text-decoration: underline; }
+    .lang-nav a[aria-current="page"] {
+      background: rgba(94, 53, 177, 0.15);
+      font-weight: 600;
+      cursor: default;
+      text-decoration: none;
+    }
     h1 { font-size: 1.5rem; margin-top: 0; letter-spacing: -0.02em; }
     h2 { font-size: 1.05rem; margin-top: 1.75rem; margin-bottom: 0.5rem; color: var(--accent); }
     p, ul { margin: 0.65rem 0; color: var(--muted); }
@@ -41,6 +64,15 @@
   </style>
 </head>
 <body>
+  <nav class="lang-nav" aria-label="Idioma">
+    <span style="color: var(--muted); margin-right: 0.25rem;">Idioma:</span>
+    <a href="index.html" hreflang="pt-BR" aria-current="page">Português (BR)</a>
+    <a href="pt-PT.html" hreflang="pt-PT">Português (PT)</a>
+    <a href="en.html" hreflang="en">English</a>
+    <a href="es.html" hreflang="es">Español</a>
+    <a href="ru.html" hreflang="ru">Русский</a>
+  </nav>
+
   <header>
     <h1>Política de privacidade</h1>
     <p class="meta"><strong>Linkes</strong> · aplicativo móvel (iOS e Android)</p>
